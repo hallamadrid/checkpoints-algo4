@@ -1,0 +1,19 @@
+FUNCTION insertion_sort(tab : ARRAY_OF INTEGER[15];) : ARRAY_OF float 
+BEGIN
+FOR i FROM 1 TO tab.length  DO 
+VAR current = tab [i]    
+        VAR j=i-1   
+WHILE (j>=0 && tab[j]>current) DO    
+tab[j+1] := tab[j];    
+j--;  
+END_WHILE    
+tab[j+1]=current; 
+END_FOR  
+return tab[i] 
+END
+ALGORITHM insertion()
+VAR 
+tab :=  
+BEGIN     
+insertion_sort([1,2,3,6,3,4,9])
+END
